@@ -29,26 +29,29 @@ def msg(apikey, time):
                     weather = 'Блин:( Что-то не получилось получить погоду для _'+ city +'_ в данное время. Сори('
             except:
                 weather = 'Блин:( Что-то не получилось получить погоду для _'+ city +'_ в данное время. Сори('
+                print('Блин:( Что-то не получилось получить погоду для _'+ city +'_ в данное время. Сори(')
 
             # forecast # в owmapi добавить методы для форкастов, чтобы также их прысылать. на +3 часа сегодня и на завтра
 
             try:
                 users = list(data[time][city])  # дублируем массив юзеров для данного города и времени
+                print('успешно спарсили лист юзеров')
             except:
                 users = []
+                print('Неуспешно спарсили лист юзеров')
             for user in users:
-                # print('bot.send_message(' + str(user) + ', weather, parse_mode="Markdown")') #какая функция сработала
+                print('Пошла команда: bot.send_message(' + str(user) + ', weather, parse_mode="Markdown")') #какая функция сработала
                 try:
                     bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
                     print(time +', succesful message to user:'+user+', for city:'+ city)
                 except:
-                    pass
+                    print('Не отправилось письмо! Что-то с телеграм либой походу :(')
     except:
         pass
 
 #шедулим отправку для времен с двузначным значением
 times2 = ["10:00", "11:00", "12:00", "13:00",
-          "14:10",
+          "14:20",
           "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00", "00:00"]
 for hour in times2:
     schedule.every().day.at(str(hour)).do(msg, apikey, hour)
