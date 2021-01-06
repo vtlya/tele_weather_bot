@@ -1,0 +1,21 @@
+# If you need to specify a version
+ca-certificates==2020.12.8
+certifi	2020.12.5==2020.12.5
+chardet==4.0.0
+geojson==2.5.0
+idna==2.10
+jsons==1.3.1
+openssl==1.1.1i
+pysocks==1.7.1
+pytelegrambotapi==3.7.4
+requests==2.25.1
+schedule==0.6.0
+setuptools==51.0.0
+sqlite==3.33.0
+telebot==0.0.4
+typish==1.9.1
+urllib3==1.26.2
+vc==14.2
+wheel==0.36.2
+wincertstore==0.2
+zlib==1.2.11
