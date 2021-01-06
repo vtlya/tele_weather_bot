@@ -1,5 +1,4 @@
 # If you need to specify a version
-ca-certificates==2020.12.8
 chardet==4.0.0
 geojson==2.5.0
 idna==2.10
