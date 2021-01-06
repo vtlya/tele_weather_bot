@@ -45,13 +45,15 @@ def msg(apikey, time):
                     bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
                     print(time +', succesful message to user:'+user+', for city:'+ city)
                 except:
+                    bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
                     print('Не отправилось письмо! Что-то с телеграм либой походу :(')
+                bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
     except:
         pass
 
 #шедулим отправку для времен с двузначным значением
 times2 = ["10:00", "11:00", "12:00", "13:00",
-          "14:40",
+          "15:20",
           "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00", "23:00", "00:00"]
 for hour in times2:
     schedule.every().day.at(str(hour)).do(msg, apikey, hour)
