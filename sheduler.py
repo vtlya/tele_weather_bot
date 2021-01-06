@@ -42,7 +42,7 @@ def msg(apikey, time):
                     bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
                     print(time +', succesful message to user:'+user+', for city:'+ city)
                 except:
-                    bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
+                    #bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
                     print('Не отправилось письмо! Что-то с телеграм либой походу :(')
                 bot.send_message(user, weather, parse_mode='Markdown')  # делаем рассылку погоды каждому
     except:

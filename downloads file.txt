@@ -1,0 +1,6 @@
+commands to download from master:
+heroku ps:copy times.json --app telegramowmbot --dyno bot.1
+heroku ps:copy times.json --app telegramowmbot --dyno sheduler.1
+
+commands to download file from One_dyno_branch
+heroku ps:copy times.json --app telegramowmbot --dyno sheduler.1
