@@ -1,6 +1,17 @@
-commands to download from master:
-heroku ps:copy times.json --app telegramowmbot --dyno bot.1
-heroku ps:copy times.json --app telegramowmbot --dyno sheduler.1
+USAGE
+  $ heroku ps:copy FILE
 
-commands to download file from One_dyno_branch
+OPTIONS
+  -a, --app=app        (required) app to run command against
+  -d, --dyno=dyno      specify the dyno to connect to
+  -o, --output=output  the name of the output file
+  -r, --remote=remote  git remote of app to use
+
+DESCRIPTION
+  Example:
+
+       $ heroku ps:copy FILENAME --app murmuring-headland-14719
+
+commands to download files:
+heroku ps:copy times.json --app telegramowmbot --dyno bot.1
 heroku ps:copy times.json --app telegramowmbot --dyno sheduler.1
