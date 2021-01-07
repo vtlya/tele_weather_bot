@@ -80,7 +80,7 @@ def write_json(time, chat_id, city):
         #print('succesfull subscribe at '+ str(time) + ', city:' + str(city)) #лог для отладки
     with open(json_path, 'w') as f:
         f.write(json.dumps(data))
-        print('one time notification created. chat_id:' + chat_id) #лог для отладки
+        print('one time notification created. chat_id:' + str(chat_id)) #лог для отладки
 
 # метод записывает в json подписчиков на все времена и город
 def write_manytime_json(time, chat_id, city):
@@ -102,7 +102,7 @@ def write_manytime_json(time, chat_id, city):
     print(data)
     with open(json_path, 'w') as f:
         f.write(json.dumps(data))
-        print('many times notifications created. chat_id:' + chat_id) #лог для отладки
+        print('many times notifications created. chat_id:' + str(chat_id)) #лог для отладки
 
 def write_user(username, chat_id):
     with open(user_list) as f:
@@ -114,7 +114,7 @@ def write_user(username, chat_id):
         pass
     with open(user_list, 'w') as f:
         f.write(json.dumps(data))
-        print('+ 1 user:"' + username + '", with chat:' + chat_id) #лог для отладки
+        print('+ 1 user:"' + str(username) + '", with chat:' + str(chat_id)) #лог для отладки
 
 # метод удаляет все подписки у пользователя - пока не реализован :(
 def delete_supscriptions(chat_id):
