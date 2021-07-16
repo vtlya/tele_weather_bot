@@ -1,1 +1,1 @@
-bot: honcho -f ProcfileHoncho start
+worker: honcho -f ProcfileHoncho start
